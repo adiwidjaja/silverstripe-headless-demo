@@ -1,0 +1,8 @@
+---
+Name: silverstripe-headless-demo
+---
+SilverStripe\Core\Manifest\ModuleManifest:
+  project: app
+Page:
+  extensions:
+    - DNADesign\Elemental\Extensions\ElementalPageExtension

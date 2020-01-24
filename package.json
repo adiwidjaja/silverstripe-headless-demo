@@ -1,0 +1,8 @@
+{
+  "name": "silverstripe-headless-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:adiwidjaja/silverstripe-headless-demo.git",
+  "author": "Andy Adiwidjaja",
+  "license": "MIT",
+}

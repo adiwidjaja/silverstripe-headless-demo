@@ -1,0 +1,11 @@
+/silverstripe-cache/
+/.env
+/vendor/
+/themes/simple/
+/resources/
+/public/resources/
+/node_modules
+/.idea
+/app/client/dist/
+/yarn-error.log
+.DS_Store
