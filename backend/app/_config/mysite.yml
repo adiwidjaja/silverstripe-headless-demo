@@ -6,3 +6,7 @@ SilverStripe\Core\Manifest\ModuleManifest:
 Page:
   extensions:
     - DNADesign\Elemental\Extensions\ElementalPageExtension
+DNADesign\Elemental\Models\ElementContent:
+  headless_fields:
+    Title: Title
+    HTML: Content

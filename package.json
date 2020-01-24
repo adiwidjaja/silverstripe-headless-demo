@@ -5,4 +5,35 @@
   "repository": "git@github.com:adiwidjaja/silverstripe-headless-demo.git",
   "author": "Andy Adiwidjaja",
   "license": "MIT",
+  "scripts": {
+    "dev": "node --require 'dotenv/config' server.js",
+    "eslint": "eslint src/",
+    "build": "next build",
+    "start": "next start",
+    "storybook": "start-storybook",
+    "build-storybook": "build-storybook",
+    "test": "jest [\\\\/]src[\\\\/] --watch --env=jsdom",
+    "check-types": "tsc --noEmit",
+    "lint:css": "stylelint \"./src/**/*.ts\" \"./src/**/*.tsx\""
+  },
+  "dependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/styled-components": "^4.4.2",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.6",
+    "next": "^9.2.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "styled-components": "^5.0.0",
+    "styled-reset": "^4.0.10",
+    "typescript": "^3.7.5"
+  },
+  "devDependencies": {
+    "@storybook/preset-typescript": "^1.2.0",
+    "@storybook/react": "^5.3.7",
+    "react-docgen-typescript-loader": "^3.6.0",
+    "ts-loader": "^6.2.1"
+  }
 }
