@@ -3,8 +3,8 @@ import React from "react";
 const PathContext = React.createContext({
   host: "",
   path: "",
-  locale: "",
   rendering: "",
+  title: "",
   url: ""
 });
 

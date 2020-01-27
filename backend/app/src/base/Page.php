@@ -33,7 +33,7 @@ namespace {
         ];
 
         private static $headless_fields = [
-            "ElementalArea.Elements" => "Elements"
+            "ElementalArea.Elements" => "elements"
         ];
 
         function getParents($showHidden = false) {
@@ -72,6 +72,12 @@ namespace {
 
         public function getElements() {
             return $this->ElementalArea()->Elements();
+        }
+
+        public function PreviewLink($action = null) {
+            $link = $this->RelativeLink($action);
+            $slash = substr($link, 0, 1) == "/" ? "" : "/";
+            return "http://localhost:3000$slash".$link;
         }
 
 //        public function provideGraphQLScaffolding(SchemaScaffolder $scaffolder)

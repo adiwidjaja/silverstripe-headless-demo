@@ -1,28 +1,25 @@
 import * as React from "react";
 import styled from "styled-components";
-import { copytext, supersizedcopytext } from "../../../styles/typography";
+import { copytext } from "../../../styles/typography";
 
 interface IParagraph {
   children: string;
   className?: string;
   margin?: boolean;
-  supersized?: boolean;
 }
 
 interface IParagraphStyled {
   margin: boolean;
-  supersized: boolean;
 }
 
 export const ParagraphStyled = styled.div<IParagraphStyled>`
-  ${props => (props.supersized ? supersizedcopytext : copytext)};
+  ${copytext};
   ${props => (props.margin ? "margin-bottom: 1em" : null)};
 `;
 
-const Paragraph: React.FunctionComponent<IParagraph> = ({
+const TextContent: React.FunctionComponent<IParagraph> = ({
   children,
   className,
-  supersized = false,
   margin = false
 }) => {
   return (
@@ -30,13 +27,12 @@ const Paragraph: React.FunctionComponent<IParagraph> = ({
       dangerouslySetInnerHTML={{ __html: children }}
       className={className}
       margin={margin}
-      supersized={supersized}
     />
   );
 };
 
-Paragraph.defaultProps = {
+TextContent.defaultProps = {
   className: ""
 };
 
-export default Paragraph;
+export default TextContent;

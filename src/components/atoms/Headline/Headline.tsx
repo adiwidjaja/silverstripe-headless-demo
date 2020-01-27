@@ -4,14 +4,12 @@ import { headline1, headline2, headline3 } from "../../../styles/typography";
 
 interface HeadlineProps {
   level: number;
-  centered?: boolean;
 }
 
 export const HeadlineStyled = styled.h1<HeadlineProps>`
   ${props => (props.level === 1 ? headline1 : null)}
   ${props => (props.level === 2 ? headline2 : null)}
   ${props => (props.level === 3 ? headline3 : null)}
-  ${props => (props.centered ? "text-align: center;" : "")}
 `;
 
 interface IHeadline {
@@ -23,7 +21,6 @@ interface IHeadline {
   as?: "h1" | "h2" | "h3" | "p" | null;
   /** Optional class name */
   className?: string;
-  centered?: boolean;
 }
 
 const Headline: React.FunctionComponent<IHeadline> = ({
@@ -31,7 +28,6 @@ const Headline: React.FunctionComponent<IHeadline> = ({
   level = 1,
   as,
   className,
-  centered = false
 }) => {
   const useLevel = level || 1;
   let useAs = as || "h1";
@@ -50,7 +46,6 @@ const Headline: React.FunctionComponent<IHeadline> = ({
       className={className}
       level={useLevel}
       as={useAs}
-      centered={centered}
     >
       {children}
     </HeadlineStyled>

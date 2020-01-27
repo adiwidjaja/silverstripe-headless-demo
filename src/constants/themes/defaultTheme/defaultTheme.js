@@ -4,6 +4,7 @@ const defaultTheme = {
     rgbblack: "0,0,0",
     error: "rgb(239, 46, 36)",
     primary: "#C8271B",
+    primaryDark: "#69140e",
     text: "#131F42",
     white: "#FFFFFF"
   },

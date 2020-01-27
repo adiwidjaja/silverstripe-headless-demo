@@ -8,5 +8,5 @@ Page:
     - DNADesign\Elemental\Extensions\ElementalPageExtension
 DNADesign\Elemental\Models\ElementContent:
   headless_fields:
-    Title: Title
-    HTML: Content
+    Title: title
+    HTML: content

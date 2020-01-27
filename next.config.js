@@ -2,11 +2,10 @@
 // const withTypescript = require('@zeit/next-typescript')
 // module.exports = withTypescript()
 require('dotenv').config();
-const withCSS = require('@zeit/next-css');
 
 const isProd = process.env.NODE_ENV === 'production';
 
-module.exports = withCSS({
+module.exports = {
   inlineImageLimit: 16384,
   publicRuntimeConfig: {
     BASE_URL: process.env.BASE_URL, // Pass through env variables
@@ -38,4 +37,4 @@ module.exports = withCSS({
 
     return config;
   }
-});
+};

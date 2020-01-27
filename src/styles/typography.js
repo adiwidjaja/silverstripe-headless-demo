@@ -63,21 +63,12 @@ const copytext = css`
   }
 `;
 
-const supersizedcopytext = css`
+const menutext = css`
   font-family: ${props => props.theme.fonts.Copy};
-  font-size: ${calcrem(22)};
+  font-size: ${calcrem(18)};
   font-weight: normal;
-  line-height: ${calcrem(27)};
-  color: ${props => props.theme.colors.text};
-
-  margin-bottom: 27px;
-
-  ${media.moreThan("md")} {
-    font-size: ${calcrem(26)};
-    line-height: ${calcrem(39)};
-
-    margin-bottom: 40px;
-  }
+  line-height: ${calcrem(23)};
+  color: ${props => props.theme.colors.white};
 `;
 
-export { headline1, headline2, headline3, copytext, supersizedcopytext };
+export { headline1, headline2, headline3, copytext, menutext};
