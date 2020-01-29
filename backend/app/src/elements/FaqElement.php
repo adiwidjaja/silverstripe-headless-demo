@@ -1,11 +1,14 @@
 <?php
 
+namespace App\Elements;
+
 use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\Assets\Image;
+use SilverStripe\ORM\FieldType\DBField;
 
 class FaqElement extends BaseElement {
     private static $db = [
-        "Description" => "HTMLText",
+        "ShortText" => "HTMLText",
         "Text" => "HTMLText",
     ];
 
@@ -19,9 +22,9 @@ class FaqElement extends BaseElement {
 
     private static $headless_fields = [
         "Title" => "title",
-        "Description" => "description",
+        "ShortText" => "description",
         "Text" => "text",
-        "Thumbnail" => "thumbnail",
+        "getThumbnail" => "thumbnail",
     ];
 
     private static $table_name = 'FaqElement';
@@ -33,7 +36,13 @@ class FaqElement extends BaseElement {
 
     public function getThumbnail() {
         if($image = $this->Image()) {
-            return $image->Fit(200,200);
+            return $image->Fit(200,200)->getAbsoluteURL();
         }
     }
+
+    // Does not work
+//    public function getEditorPreview()
+//    {
+//        return DBField::create_field('HTMLText', $this->ShortText)->Summary(20);
+//    }
 }

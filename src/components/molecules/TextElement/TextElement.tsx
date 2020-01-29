@@ -5,20 +5,20 @@ import TextContent from "../../atoms/TextContent/TextContent";
 import Headline from "../../atoms/Headline/Headline";
 
 export interface ITextElement {
-  headline?: string;
-  text: string;
+  title?: string;
+  content: string;
 }
 
 const TextElementStyled = styled.div``;
 
 const TextElement: React.FunctionComponent<ITextElement> = ({
-  headline,
-  text,
+  title,
+  content,
 }) => (
   <TextElementStyled>
     <Container>
-      {text ? <Headline>{headline}</Headline> : null}
-      <TextContent>{text}</TextContent>
+      {title ? <Headline>{title}</Headline> : null}
+      <TextContent>{content}</TextContent>
     </Container>
   </TextElementStyled>
 );

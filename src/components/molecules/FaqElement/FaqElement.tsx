@@ -7,7 +7,7 @@ import AnimateHeight from "react-animate-height";
 import Button from "../../atoms/Button/Button";
 
 export interface IFaqElement {
-  headline: string;
+  title: string;
   description?: string,
   text: string;
   thumbnail?: string;
@@ -34,7 +34,7 @@ const FaqImage = styled.img`
 `;
 
 const FaqElement: React.FunctionComponent<IFaqElement> = ({
-  headline,
+  title,
   description,
   text,
   thumbnail,
@@ -47,7 +47,7 @@ const FaqElement: React.FunctionComponent<IFaqElement> = ({
           <FaqImage src={thumbnail}/>
         </FaqImageContainer> : null}
         <FaqContent>
-          <Headline>{headline}</Headline>
+          <Headline>{title}</Headline>
           {description ? <TextContent>{description}</TextContent> : null}
           <AnimateHeight
             duration={ 500 }

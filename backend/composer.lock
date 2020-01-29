@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/adiwidjaja/silverstripe-headless.git",
-                "reference": "7e4175d36796f81b671dfe2641655d57ba9af245"
+                "reference": "b68d88197d54d86f6ae7eb681e20fee0720849a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/adiwidjaja/silverstripe-headless/zipball/7e4175d36796f81b671dfe2641655d57ba9af245",
-                "reference": "7e4175d36796f81b671dfe2641655d57ba9af245",
+                "url": "https://api.github.com/repos/adiwidjaja/silverstripe-headless/zipball/b68d88197d54d86f6ae7eb681e20fee0720849a7",
+                "reference": "b68d88197d54d86f6ae7eb681e20fee0720849a7",
                 "shasum": ""
             },
             "type": "silverstripe-vendormodule",
@@ -35,7 +35,7 @@
                 "source": "https://github.com/adiwidjaja/silverstripe-headless/tree/master",
                 "issues": "https://github.com/adiwidjaja/silverstripe-headless/issues"
             },
-            "time": "2020-01-24T15:13:28+00:00"
+            "time": "2020-01-27T21:24:06+00:00"
         },
         {
             "name": "bramus/ansi-php",
