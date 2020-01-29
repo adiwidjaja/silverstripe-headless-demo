@@ -53,7 +53,9 @@ const copytext = css`
   line-height: ${calcrem(23)};
   color: ${props => props.theme.colors.text};
 
-  margin-bottom: 10px;
+  p {
+    margin-bottom: 20px;  
+  }
 
   ${media.moreThan("md")} {
     font-size: ${calcrem(16)};

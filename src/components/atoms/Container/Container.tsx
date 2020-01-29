@@ -5,7 +5,7 @@ import media from "../../../utilities/media";
 
 interface IContainer {
   children: React.ReactNode,
-  sidebar?: React.ReactNode
+  className?: string,
 }
 
 const ContainerStyled = styled.div`
@@ -26,32 +26,21 @@ const ContainerStyled = styled.div`
 `;
 
 const ContainerMain = styled.div`
+  width: 100%;
   ${media.moreThan('lg')} {
     flex:1 0 auto;
-    width: calc(100% / 12 * 9);
     padding: 0 15px;
   }
 `;
-
-const ContainerSidebar = styled.div`
-  ${media.moreThan('lg')} {
-    width: calc(100% / 12 * 3);
-    padding: 0 15px;
-  }
-`;
-
 const Container: React.FunctionComponent<IContainer> = ({
   children,
-  sidebar
+  className,
 }) =>
   (
     <ContainerStyled>
-      <ContainerMain>
+      <ContainerMain className={className}>
         {children}
       </ContainerMain>
-      {sidebar && <ContainerSidebar>
-        {sidebar}
-      </ContainerSidebar>}
     </ContainerStyled>
   );
 
