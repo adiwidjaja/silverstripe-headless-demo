@@ -77,6 +77,7 @@ namespace {
         public function PreviewLink($action = null) {
             $link = $this->RelativeLink($action);
             $slash = substr($link, 0, 1) == "/" ? "" : "/";
+            return "http://test-headless.atw.io$slash".$link;
             return "http://localhost:3000$slash".$link;
         }
 
