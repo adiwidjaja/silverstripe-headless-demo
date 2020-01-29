@@ -35,8 +35,9 @@ class FaqElement extends BaseElement {
     }
 
     public function getThumbnail() {
-        if($image = $this->Image()) {
-            return $image->Fit(200,200)->getAbsoluteURL();
+	if($image = $this->Image()) {
+	    if($image->exists())	
+                return $image->Fit(200,200)->getAbsoluteURL();
         }
     }
 
