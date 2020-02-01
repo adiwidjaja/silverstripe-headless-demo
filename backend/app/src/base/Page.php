@@ -19,6 +19,7 @@ namespace {
 
     class Page extends SiteTree
     {
+
         private static $db = [
         ];
 
