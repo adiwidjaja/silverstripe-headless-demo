@@ -1,0 +1,71 @@
+---
+Name: app graphql
+---
+SilverStripe\Control\Director:
+  rules:
+    'graphql': '%$SilverStripe\GraphQL\Controller.default'
+
+#SilverStripe\GraphQL\Controller:
+#  cors:
+#    Enabled: true
+#    Allow-Origin: '*'
+#    Allow-Headers: 'Authorization, Content-Type'
+#    Allow-Methods:  'GET, POST, OPTIONS'
+#    Max-Age: 86400
+
+SilverStripe\GraphQL\Manager:
+  schemas:
+    default:
+      scaffolding:
+        types:
+          Page:
+            fields: "*"
+            nestedQueries:
+              Elements:
+#                resolver: DNADesign\Elemental\GraphQL\ElementsResolver
+                paginate: false
+            operations:
+              read:
+                name: pages
+                filters:
+                  URLSegment: true
+              readOne:
+                name: page
+                filters:
+                  URLSegment: true  # Todo: argument
+#      types:
+#        Page: 'App\GraphQL\PageTypeCreator'
+#        Element: 'App\GraphQL\ElementTypeCreator'
+#      queries:
+#        readPages: 'App\GraphQL\ReadPagesQueryCreator'
+#      scaffolding:
+#        types:
+#          Page:
+#            fields: "*"
+#            nestedQueries:
+#              Elements:
+#                resolver: App\ElementsResolver
+#                paginate: false
+#            operations:
+#              read:
+#                name: pages
+#                filters:
+#                  URLSegment: true
+#              readOne:
+#                name: page
+#                filters:
+#                  URLSegment: true  # Todo: argument
+          SilverStripe\CMS\Model\RedirectorPage:
+            fields: "*"
+            operations:
+              read:
+                name: rpages
+          DNADesign\Elemental\Models\BaseElement:
+            fields: "*"
+            operations:
+              readOne: true
+          App\Elements\TextElement:
+            fields: "*"
+            operations:
+              read: true
+              readOne: true
